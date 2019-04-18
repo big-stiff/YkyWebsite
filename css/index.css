@@ -1,0 +1,371 @@
+﻿.w {
+    width: 990px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: 'arrow';
+    src: url('../fonts/arrow.eot?bl2lh');
+    src: url('../fonts/arrow.eot?bl2lh#iefix') format('embedded-opentype'), url('../fonts/arrow.ttf?bl2lh') format('truetype'), url('../fonts/arrow.woff?bl2lh') format('woff'), url('../fonts/arrow.svg?bl2lh#arrow') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 头部 */
+
+.hd {
+    height: 100px;
+    background: url(../img/header_bg.jpg) no-repeat center;
+}
+
+
+/* 导航*/
+
+.navSearch {
+    height: 50px;
+    background-color: #ccc;
+}
+
+.navSearch>ul {
+    display: flex;
+}
+
+.navSearch>ul>li {
+    flex: 1;
+    position: relative;
+    line-height: 50px;
+}
+
+.navSearch ul li {
+    text-align: center;
+    font-size: 14px;
+}
+
+.navSearch ul li a {
+    display: block;
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: 600;
+}
+
+.navSearch ul>li a:hover {
+    color: #2770C4;
+    font-weight: 900;
+    background-color: #969696;
+}
+
+.navSearch ul>li:hover .item {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navSearch ul .item {
+    width: 100%;
+    position: absolute;
+    transition: all .6s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.navSearch ul .item li {
+    background-color: #ccc;
+    line-height: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+ul .item li a {
+    font-weight: normal;
+}
+
+
+/* 轮播图开始 */
+
+.CarouselPic {
+    margin-top: 20px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.CarouselPic li {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.CarouselPic a,
+.CarouselPic img {
+    display: block;
+    width: 990px;
+    height: 400px;
+    transition: all .8s;
+}
+
+.CarouselPic a:hover img {
+    transform: scale(1.05);
+}
+
+.CarouselPic .before,
+.CarouselPic .after {
+    position: absolute;
+    width: 40px;
+    height: 68px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.CarouselPic .before {
+    background: url(../img/icon-slides.png) no-repeat -84px 0;
+}
+
+.CarouselPic .after {
+    background: url(../img/icon-slides.png) no-repeat -126px 0px;
+    right: 0;
+}
+
+.CarouselPic .before:hover {
+    background-position: 0 0;
+    background-color: #ccc;
+}
+
+.CarouselPic .after:hover {
+    background-position: -43px 0;
+    background-color: #ccc;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    z-index: 1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle span {
+    float: left;
+    width: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    height: 6px;
+    cursor: pointer;
+    margin: 5px 10px 0 0;
+}
+
+.circle span:first-child {
+    margin-left: 10px;
+}
+
+.circle .currentStrip {
+    background-color: #ccc;
+}
+
+
+/* 产品展示 */
+
+.product-show,
+.teach-video,
+.others {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.product-show ul,
+.teach-video ul {
+    display: flex;
+}
+
+.product-show ul li,
+.teach-video ul li {
+    flex: 1;
+    text-align: center;
+    padding-top: 15px;
+    transition: all 0.3s ease-in;
+}
+
+.product-show ul li:hover,
+.teach-video ul li:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15) inset;
+}
+
+.product-show ul li img {
+    width: 120px;
+    height: 160px;
+}
+
+.teach-video ul li img {
+    width: 160px;
+    height: 120px;
+}
+
+.product-show ul li p,
+.teach-video ul li p {
+    margin: 0 auto;
+    width: 120px;
+    line-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-show h2,
+.teach-video h2 {
+    padding-left: 25px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #666;
+    font-size: 20px;
+    /* border-bottom: 2px solid #ccc; */
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.product-show i,
+.teach-video i,
+.others section i {
+    font-family: 'arrow';
+    vertical-align: -1px;
+    transition: all 0.5s;
+}
+
+.product-show .moreInfo,
+.teach-video .moreInfo {
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+
+/* 其他版块 */
+
+.others {
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+}
+
+.others section {
+    float: left;
+    width: 485px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.others section:nth-child(odd) {
+    margin-right: 20px;
+}
+
+.others h2 {
+    padding-left: 25px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #666;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.others section .moreInfo {
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.others section i {
+    vertical-align: -2px;
+}
+
+.others ul li p {
+    float: left;
+    padding-left: 15px;
+}
+
+.others ul a {
+    display: block;
+    width: 485px;
+    height: 30px;
+}
+
+.others ul li a,
+.others ul li a p,
+.others ul li a span {
+    transition: all .3s;
+}
+
+.others ul li a:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.others ul li a:hover span,
+.others ul li a:hover p {
+    font-weight: 700;
+}
+
+.others ul li span,
+.others ul li p {
+    line-height: 30px;
+}
+
+.others ul li span {
+    float: right;
+    padding-right: 10px;
+}
+
+.others5 .solutionimg,
+.others6 .skillimg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.others5 .soluwrap,
+.others6 .skillwrap {
+    position: relative;
+}
+
+.others5 ul,
+.others6 ul {
+    float: right;
+}
+
+.others5 ul a,
+.others6 ul a {
+    width: 350px;
+}
+
+.footer ul {
+    display: flex;
+    background-color: rgba(0, 0, 0, .1);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer ul li {
+    flex: 1;
+}
+
+.footer ul li a {
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    transition: all .3s;
+}
+
+.footer ul li:hover a {
+    background-color: rgba(0, 0, 0, .1);
+    font-weight: 700;
+}
+
+.footer .footerInfo {
+    text-align: center;
+    line-height: 25px;
+    color: #666;
+}
